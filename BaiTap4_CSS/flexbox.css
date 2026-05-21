@@ -1,0 +1,35 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background-color: #f0f0f0; font-family: sans-serif; }
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; background-color: white;
+    border-bottom: 1px solid #ccc;
+}
+.menu a { text-decoration: none; color: black; margin: 0 10px; }
+.menu a:hover { color: red; text-decoration: underline; }
+
+.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; padding: 20px;
+}
+.card {
+    flex: 0 0 calc(25% - 20px); /* Dung dung cong thuc de bai bat buoc */
+    background-color: white; padding: 15px; border: 1px solid #ccc;
+    display: flex; flex-direction: column;
+    transition: all 0.3s;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 2px 2px 10px gray;
+}
+.img-box { height: 120px; background-color: lightgray; text-align: center; line-height: 120px; }
+.card h3 { font-size: 14px; margin: 10px 0; }
+
+.buy-btn {
+    margin-top: auto; /* Thuoc tinh quan trong nhat de dinh nut vao day */
+    background-color: orange; border: none; padding: 8px; cursor: pointer;
+}

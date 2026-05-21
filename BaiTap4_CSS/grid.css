@@ -1,0 +1,31 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: sans-serif; padding: 10px; }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    gap: 10px;
+    grid-template-areas: 
+        "header header header"
+        "hero hero hero"
+        "sidebar main ads"
+        "footer footer footer";
+}
+
+.header { grid-area: header; background-color: gray; color: white; text-align: center; padding: 15px; }
+.hero { grid-area: hero; background-color: lightblue; text-align: center; padding: 30px; }
+.sidebar { grid-area: sidebar; background-color: #e0e0e0; padding: 10px; }
+.main { grid-area: main; }
+.ads { grid-area: ads; background-color: #e0e0e0; padding: 10px; }
+.footer { grid-area: footer; background-color: gray; color: white; text-align: center; padding: 15px; }
+
+/* Grid con ben trong phan Main content */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+.box {
+    background-color: white; border: 1px solid black;
+    height: 150px; display: flex; justify-content: center; align-items: center;
+}
