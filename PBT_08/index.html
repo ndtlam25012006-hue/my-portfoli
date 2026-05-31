@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Thiết bị Máy tính</title>
+    <link rel="stylesheet" href="style_thietbi.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Quản lý Thiết bị Máy tính</h2>
+            <div class="lang-switch">
+                <button class="active">Tiếng Việt</button>
+                <button>English</button>
+            </div>
+        </div>
+
+        <div class="toolbar">
+            <button id="btnOpenModal" class="btn-add">Thêm Thiết bị</button>
+            <input type="text" id="searchDevice" placeholder="Tìm kiếm thiết bị...">
+        </div>
+
+        <div id="deviceGrid" class="device-grid"></div>
+    </div>
+
+    <div id="deviceModal" class="modal hidden">
+        <div class="modal-content">
+            <span id="btnCloseModal" class="close-btn">&times;</span>
+            <h3 id="modalTitle">Thêm Thiết bị</h3>
+            
+            <form id="deviceForm">
+                <input type="hidden" id="editDeviceId">
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Tên</label>
+                        <input type="text" id="deviceName" required placeholder="Nhập tên thiết bị...">
+                    </div>
+                    <div class="form-group">
+                        <label>Số Serial</label>
+                        <input type="text" id="deviceSerial" required placeholder="Nhập số serial...">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Loại</label>
+                        <select id="deviceType">
+                            <option value="Laptop">Laptop</option>
+                            <option value="Máy bàn">Máy bàn</option>
+                            <option value="Máy in">Máy in</option>
+                            <option value="Màn hình">Màn hình</option>
+                            <option value="Máy chủ">Máy chủ</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Ngày Mua</label>
+                        <input type="date" id="purchaseDate" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Bảo Hành</label>
+                        <select id="warranty">
+                            <option value="1 năm">1 năm</option>
+                            <option value="2 năm">2 năm</option>
+                            <option value="3 năm">3 năm</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Quản Lý</label>
+                        <input type="email" id="managerEmail" required placeholder="Nhập email...">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Trạng Thái</label>
+                    <select id="deviceStatus">
+                        <option value="Hoạt động">Hoạt động</option>
+                        <option value="Không hoạt động">Không hoạt động</option>
+                    </select>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" id="btnCancel" class="btn-cancel">Hủy</button>
+                    <button type="submit" class="btn-save">Lưu</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script_thietbi.js"></script>
+</body>
+</html>

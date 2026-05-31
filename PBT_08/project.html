@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Đồ án Sinh viên</title>
+    <link rel="stylesheet" href="style_doan.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Chào mừng đến với Đồ án tốt nghiệp</h2>
+            <div class="lang-switch">EN | VI</div>
+        </div>
+
+        <div class="stats-container">
+            <div class="stat-card">
+                <p class="stat-title">Tổng số Đồ án</p>
+                <h3 id="totalProjects">0</h3>
+            </div>
+            <div class="stat-card">
+                <p class="stat-title">Hoàn thành</p>
+                <h3 id="completedProjects" class="text-success">0</h3>
+            </div>
+            <div class="stat-card">
+                <p class="stat-title">Đang làm</p>
+                <h3 id="pendingProjects" class="text-warning">0</h3>
+            </div>
+        </div>
+
+        <div class="toolbar">
+            <input type="text" id="searchProject" placeholder="Filter by student or title...">
+            <button id="btnOpenModal" class="btn-add">Thêm Đồ án</button>
+        </div>
+
+        <table class="project-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Tiêu đề</th>
+                    <th>Sinh viên</th>
+                    <th>Email</th>
+                    <th>Điện thoại</th>
+                    <th>Giảng viên HD</th>
+                    <th>Trạng thái</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody id="projectTableBody"></tbody>
+        </table>
+    </div>
+
+    <div id="projectModal" class="modal hidden">
+        <div class="modal-content">
+            <span id="btnCloseModal" class="close-btn">&times;</span>
+            <h3 id="modalTitle">Thêm/Sửa Đồ án</h3>
+            <form id="projectForm">
+                <input type="hidden" id="editProjectId">
+                
+                <div class="form-group">
+                    <label>Tiêu đề Đồ án</label>
+                    <input type="text" id="projTitle" required placeholder="Nhập tiêu đề...">
+                </div>
+                <div class="form-group">
+                    <label>Tên Sinh viên</label>
+                    <input type="text" id="studentName" required placeholder="Nhập tên sinh viên...">
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="studentEmail" required placeholder="Nhập email...">
+                </div>
+                <div class="form-group">
+                    <label>Điện thoại</label>
+                    <input type="text" id="studentPhone" required placeholder="Nhập số điện thoại...">
+                </div>
+                <div class="form-group">
+                    <label>Giảng viên HD</label>
+                    <select id="mentorName">
+                        <option value="TS. Trần B">TS. Trần B</option>
+                        <option value="ThS. Lê D">ThS. Lê D</option>
+                        <option value="TS. Hoàng F">TS. Hoàng F</option>
+                        <option value="ThS. Nguyễn H">ThS. Nguyễn H</option>
+                        <option value="TS. Phan J">TS. Phan J</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Trạng thái</label>
+                    <select id="projStatus">
+                        <option value="Hoàn thành">Hoàn thành</option>
+                        <option value="Đang làm">Đang làm</option>
+                    </select>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" id="btnCancel" class="btn-cancel">Đóng</button>
+                    <button type="submit" class="btn-save">Lưu</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script_doan.js"></script>
+</body>
+</html>
