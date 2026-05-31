@@ -1,0 +1,52 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: sans-serif; font-size: 14px; line-height: 1.6; color: #333; }
+
+/* Mặc định cho Mobile */
+.header { display: flex; justify-content: space-between; align-items: center; padding: 15px; background: #333; color: #fff; }
+.menu-toggle { display: block; font-size: 24px; cursor: pointer; }
+.nav-menu { display: none; }
+
+.container-layout { display: flex; flex-direction: column; padding: 15px; gap: 15px; }
+.sidebar { display: none; } 
+.ads-bar { display: none; } 
+
+.product-grid { display: grid; grid-template-columns: 1fr; gap: 15px; }
+.product-card { border: 1px solid #ddd; border-radius: 8px; overflow: hidden; background: #fff; }
+.product-card img { width: 100%; max-width: 100%; height: auto; display: block; }
+.card-body { padding: 12px; }
+.card-body h4 { margin-bottom: 8px; }
+.price { color: #e44d26; font-weight: bold; }
+
+.footer { text-align: center; padding: 20px; background: #f4f4f4; margin-top: 20px; }
+
+/* Cho bản Tablet (min-width: 768px) */
+@media (min-width: 768px) {
+    body { font-size: 15px; }
+    .menu-toggle { display: none; } 
+    .nav-menu { display: flex; gap: 20px; } 
+    .nav-menu a { color: white; text-decoration: none; font-weight: 500; }
+    
+    .sidebar { display: block; background: #f9f9f9; padding: 12px; border-radius: 6px; border: 1px solid #eaeaea; }
+    .sidebar h3 { font-size: 16px; margin-bottom: 8px; }
+    .filter-list { display: none; } 
+    .filter-dropdown { display: block; width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
+    
+    .product-grid { grid-template-columns: repeat(2, 1fr); } 
+}
+
+/* Cho bản Desktop (min-width: 1024px) */
+@media (min-width: 1024px) {
+    body { font-size: 16px; }
+    
+    .container-layout { display: grid; grid-template-columns: 220px 1fr 160px; gap: 20px; }
+    
+    .sidebar { display: block; background: none; padding: 0; border: none; }
+    .sidebar h3 { font-size: 18px; margin-bottom: 12px; }
+    .filter-dropdown { display: none; } 
+    .filter-list { display: block; list-style: none; }
+    .filter-list li { margin: 12px 0; display: flex; align-items: center; gap: 8px; }
+    
+    .product-grid { grid-template-columns: repeat(4, 1fr); } 
+    
+    .ads-bar { display: block; background: #fff3cd; border: 1px solid #ffeeba; padding: 20px; border-radius: 6px; text-align: center; font-weight: bold; color: #856404; }
+}
