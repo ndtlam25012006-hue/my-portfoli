@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra Thử Nghiệm Validation</title>
+</head>
+<body>
+    <h1>Trang chạy thử nghiệm lỗi HTML5</h1>
+    <form action="#" method="POST">
+        <div>
+            <label>Trường hợp 1 (Để trống xem sao):</label>
+            <input type="text" required value="">
+        </div>
+        <br>
+        <div>
+            <label>Trường hợp 2 (Gõ thiếu @):</label>
+            <input type="email" value="abc">
+        </div>
+        <br>
+        <div>
+            <label>Trường hợp 3 (Gõ số quá lớn):</label>
+            <input type="number" min="1" max="10" value="15">
+        </div>
+        <br>
+        <div>
+            <label>Trường hợp 4 (Regex đúng 10 số nhưng gõ chữ):</label>
+            <input type="text" pattern="[0-9]{10}" value="abc123">
+        </div>
+        <br>
+        <div>
+            <label>Trường hợp 5 (Gõ quá ngắn):</label>
+            <input type="password" minlength="8" value="123">
+        </div>
+        <br>
+        <button type="submit">BẤM VÀO ĐÂY ĐỂ SUBMIT VÀ XEM LỖI</button>
+    </form>
+</body>
+</html>
