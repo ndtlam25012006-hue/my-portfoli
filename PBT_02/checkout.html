@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Thanh toán Đơn hàng — ShopTLU</title>
+</head>
+<body>
+    <h1>THÔNG TIN THANH TOÁN ĐƠN HÀNG</h1>
+
+    <p>Tiến trình tích lũy điểm thành viên: <progress value="75" max="100"></progress> 75%</p>
+
+    <p>
+        <label for="search-product">Tìm nhanh sản phẩm khác:</label>
+        <input type="text" id="search-product" list="product-list" placeholder="Gõ để tìm...">
+        <datalist id="product-list">
+            <option value="iPhone 16 Pro Max">
+            <option value="Samsung Galaxy S24">
+            <option value="Xiaomi 14 Ultra">
+        </datalist>
+    </p>
+
+    <form action="#" method="POST">
+        
+        <section>
+            <h2>1. Danh sách sản phẩm đã chọn</h2>
+            <table border="1" cellpadding="5">
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Sản phẩm</th>
+                        <th>Đơn giá</th>
+                        <th>Số lượng</th>
+                        <th>Thành tiền</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>iPhone 16 Pro Max</td>
+                        <td>30.000.000đ</td>
+                        <td>1</td>
+                        <td>30.000.000đ</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Ốp lưng Silicon</td>
+                        <td>500.000đ</td>
+                        <td>2</td>
+                        <td>1.000.000đ</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Củ sạc nhanh 20W</td>
+                        <td>600.000đ</td>
+                        <td>1</td>
+                        <td>600.000đ</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4" align="right"><strong>Tổng cộng tiền thanh toán:</strong></td>
+                        <td>
+                            <output name="total"><strong>31.600.000đ</strong></output>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <section>
+            <h2>2. Hình thức thanh toán</h2>
+            <p>
+                <label><input type="radio" name="payment" value="COD" checked> Thanh toán khi nhận hàng (COD)</label><br>
+                <label><input type="radio" name="payment" value="Banking"> Chuyển khoản ngân hàng</label><br>
+                <label><input type="radio" name="payment" value="E-Wallet"> Ví điện tử (Momo/ZaloPay)</label>
+            </p>
+            <p>
+                <label for="coupon">Mã giảm giá (Nếu có):</label>
+                <input type="text" id="coupon" name="coupon" pattern="SALE[0-9]{4}" placeholder="Ví dụ: SALE2026">
+            </p>
+            <p>
+                <label for="note">Ghi chú đơn hàng:</label><br>
+                <textarea id="note" name="note" rows="3" cols="40" placeholder="Lời nhắn cho shipper..."></textarea>
+            </p>
+        </section>
+
+        <section>
+            <h2>3. Lịch trình nhận hàng mong muốn</h2>
+            <p>
+                <label for="delivery-date">Ngày nhận hàng mong muốn:</label>
+                <input type="date" id="delivery-date" name="delivery-date" min="2026-06-01" required>
+            </p>
+            <p>
+                <label for="time-slot">Khung giờ nhận hàng thuận tiện:</label>
+                <select id="time-slot" name="time-slot">
+                    <option value="morning">Sáng (8h - 12h)</option>
+                    <option value="afternoon">Chiều (14h - 18h)</option>
+                    <option value="evening">Tối (18h - 21h)</option>
+                </select>
+            </p>
+            <p>
+                <label for="delay-days">Số ngày giao hàng tối đa chấp nhận (1 - 7 ngày):</label><br>
+                <input type="range" id="delay-days" name="delay-days" min="1" max="7" step="1" value="3">
+            </p>
+        </section>
+
+        <br>
+        <button type="submit" aria-label="Xác nhận đặt hàng">ĐẶT HÀNG NGAY</button>
+    </form>
+</body>
+</html>
