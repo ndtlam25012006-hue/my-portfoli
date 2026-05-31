@@ -1,0 +1,15 @@
+body { background: #eceff1; font-family: Arial, sans-serif; display: flex; justify-content: center; padding-top: 40px; }
+.form-card { background: white; padding: 30px; border-radius: 8px; width: 400px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+h2 { text-align: center; margin-bottom: 25px; color: #2c3e50; }
+.form-group { margin-bottom: 18px; position: relative; }
+label { display: block; font-size: 14px; margin-bottom: 6px; font-weight: bold; color: #34495e; }
+input { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; outline: none; }
+input:focus { border-color: #3498db; }
+.err-msg { color: #e74c3c; font-size: 12px; display: block; margin-top: 4px; }
+.meter-container { height: 6px; background: #eee; width: 100%; border-radius: 3px; margin-top: 8px; overflow: hidden; }
+#strengthMeter { height: 100%; width: 0%; transition: all 0.3s; }
+#submitBtn { width: 100%; padding: 12px; background: #3498db; color: white; border: none; border-radius: 4px; font-size: 16px; cursor: pointer; font-weight: bold; }
+#submitBtn:disabled { background: #bdc3c7; cursor: not-allowed; }
+.modal { position: fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); display:flex; justify-content:center; align-items:center; }
+.success-box { background:white; padding:30px; border-radius:6px; text-align:center; box-shadow:0 2px 10px rgba(0,0,0,0.3); }
+.hidden { display: none !important; }

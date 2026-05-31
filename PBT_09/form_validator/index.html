@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Hệ Thống Xác Thực Form Real-time</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-card">
+        <h2>Đăng Ký Tài Khoản</h2>
+        <form id="regForm">
+            <div class="form-group">
+                <label>Họ và Tên <span id="nameCheck"></span></label>
+                <input type="text" id="username" placeholder="Nhập từ 2-50 ký tự">
+            </div>
+
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" id="email" placeholder="example@domain.com">
+                <small id="emailError" class="err-msg"></small>
+            </div>
+
+            <div class="form-group">
+                <label>Mật khẩu</label>
+                <input type="password" id="password" placeholder="Nhập mật khẩu an toàn">
+                <div class="meter-container"><div id="strengthMeter"></div></div>
+                <small id="strengthText"></small>
+            </div>
+
+            <div class="form-group">
+                <label>Xác nhận mật khẩu</label>
+                <input type="password" id="confirmPassword" placeholder="Nhập lại mật khẩu khớp">
+                <small id="matchError" class="err-msg"></small>
+            </div>
+
+            <div class="form-group">
+                <label>Số điện thoại</label>
+                <input type="text" id="phone" placeholder="Nhập 10 chữ số">
+            </div>
+
+            <button type="submit" id="submitBtn" disabled>Đăng ký ngay</button>
+        </form>
+    </div>
+
+    <div id="successModal" class="modal hidden"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Catalog Sản Phẩm Cao Cấp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <h2>ShopTech</h2>
+        <div class="nav-controls">
+            <button id="darkModeToggle">🌓 Chế độ nền</button>
+            <div class="cart-icon">🛒 Giỏ hàng <span id="cartBadge" class="badge">0</span></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="filter-bar">
+            <input type="text" id="searchBar" placeholder="Tìm kiếm tên sản phẩm...">
+            <div id="categoryGroup" class="category-group">
+                <button data-cat="all" class="active">Tất cả</button>
+                <button data-cat="phone">Điện thoại</button>
+                <button data-cat="laptop">Laptop</button>
+                <button data-cat="tablet">Máy tính bảng</button>
+                <button data-cat="watch">Đồng hồ</button>
+            </div>
+            <select id="sortDropdown">
+                <option value="none">Sắp xếp theo...</option>
+                <option value="priceAsc">Giá: Thấp đến Cao</option>
+                <option value="priceDesc">Giá: Cao đến Thấp</option>
+                <option value="nameAZ">Tên: A-Z</option>
+                <option value="rateDesc">Đánh giá cao nhất</option>
+            </select>
+        </div>
+
+        <div id="productGrid" class="product-grid"></div>
+    </div>
+
+    <div id="detailModal" class="modal hidden"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
