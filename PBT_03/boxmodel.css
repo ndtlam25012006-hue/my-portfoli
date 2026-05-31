@@ -1,0 +1,55 @@
+/* Thiết lập dùng chung cho phần 1 */
+.container-lab {
+    width: 100%;
+}
+
+.box-test {
+    width: 300px;
+    padding: 20px;
+    border: 5px solid #2d3436;
+    background-color: #ffeaa7;
+    margin: 10px;
+    float: left;
+}
+
+/* Ép kiểu cho từng hộp để đo đạc */
+.content-box-style {
+    box-sizing: content-box;
+}
+
+.border-box-style {
+    box-sizing: border-box;
+}
+
+/* Thiết lập cấu trúc bố cục 3 cột cho phần 2 */
+.layout-container {
+    width: 1000px;
+    background-color: #63cdda;
+    overflow: hidden; /* tự động bọc gọn các phần tử float bên trong */
+    margin-top: 15px;
+}
+
+/* Áp dụng border-box bắt buộc để việc tính toán chuẩn xác không bị tràn dòng */
+.column {
+    box-sizing: border-box;
+    float: left;
+    min-height: 15px;
+}
+
+.sidebar-left {
+    width: 250px;
+    background-color: #f5f6fa;
+    padding: 15px;
+}
+
+.content-center {
+    width: 500px;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+.sidebar-right {
+    width: 250px;
+    background-color: #f5f6fa;
+    padding: 15px;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Thử nghiệm phòng Lab Box Model</title>
+    <link rel="stylesheet" href="boxmodel.css">
+</head>
+<body>
+    <h1>PHÒNG THỬ NGHIỆM BOX MODEL</h1>
+    
+    <h2>Phần 1: So sánh cơ chế Hộp</h2>
+    <div class="container-lab">
+        <div class="box-test content-box-style">Hộp 1 (content-box)</div>
+        <div class="box-test border-box-style">Hộp 2 (border-box)</div>
+    </div>
+
+    <div style="clear: both; margin-top: 40px;"></div>
+
+    <h2>Phần 2: Thiết kế bố cục 3 cột tiêu chuẩn (Tổng hệ thống rộng 1000px)</h2>
+    <div class="layout-container">
+        <aside class="column sidebar-left">
+            <h3>Cột Trái</h3>
+            <p>Chiều rộng thiết kế 250px kèm khoảng đệm padding bên trong.</p>
+        </aside>
+        <main class="column content-center">
+            <h3>Cột Giữa (Nội dung chính)</h3>
+            <p>Chiều rộng thiết kế 500px, chứa bài viết nội dung chi tiết hệ thống hiển thị.</p>
+        </main>
+        <aside class="column sidebar-right">
+            <h3>Cột Phải</h3>
+            <p>Chiều rộng thiết kế 250px dùng để treo biển quảng cáo, sự kiện.</p>
+        </aside>
+    </div>
+</body>
+</html>

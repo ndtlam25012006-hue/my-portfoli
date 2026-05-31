@@ -1,0 +1,100 @@
+/* Dòng đầu tiên thiết lập reset chuẩn border-box */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fafafa;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 15px;
+}
+
+/* Kiểu dáng cho Header dùng dải màu Gradient */
+#profile-header {
+    background: linear-gradient(135deg, #1e3799, #00ced1);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+#profile-header h1 {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+/* Định dạng thanh điều hướng */
+nav a {
+    color: #f5f5f5;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 5px 10px;
+    display: inline-block;
+}
+
+nav a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Trạng thái liên kết đang hoạt động */
+nav a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* Định dạng cấu trúc bảng kỹ năng */
+.skills-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background-color: white;
+}
+
+.skills-table th, .skills-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.skills-table th {
+    background-color: #1e3799;
+    color: white;
+}
+
+/* Tạo sọc ngựa vằn xen kẽ hàng chẵn hàng lẻ */
+.skills-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Hiệu ứng di chuột đổi màu dòng */
+.skills-table tr:hover {
+    background-color: #dfe6e9;
+}
+
+h2 {
+    margin-top: 20px;
+    color: #1e3799;
+    border-left: 4px solid #00ced1;
+    padding-left: 10px;
+}
+
+/* Chân trang cá nhân */
+footer {
+    background-color: #2d3436;
+    color: #b2bec3;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    font-size: 13px;
+}

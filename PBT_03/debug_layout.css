@@ -1,0 +1,25 @@
+.container {
+    width: 960px;
+    margin: 0 auto;
+    background-color: #eee;
+    overflow: hidden; /* Đảm bảo bọc trọn hai thành phần float bên trong */
+}
+
+/* Áp dụng sửa lỗi bằng việc ép kiểu hộp border-box */
+.sidebar {
+    box-sizing: border-box;
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    float: left;
+    background-color: #fab1a0;
+}
+
+.content {
+    box-sizing: border-box;
+    width: 660px; /* 300px + 660px đúng bằng 960px khít khịt với khung cha */
+    padding: 30px;
+    border: 1px solid #ccc;
+    float: left;
+    background-color: #74b9ff;
+}

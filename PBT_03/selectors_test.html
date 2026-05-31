@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm chứng CSS Selectors — Câu A2</title>
+    <style>
+        /* Tô nền vàng nhạt cho dễ nhìn cấu trúc bài test */
+        body { font-family: Arial, sans-serif; padding: 20px; background-color: #f9f9f9; }
+        
+        /* Chèn các selector kiểm chứng từ câu A2 */
+        h1 { border-bottom: 2px solid #333; }
+        .price { color: #e44d26; font-weight: bold; }
+        #app header { background-color: #eee; padding: 10px; }
+        nav a:first-child { text-transform: uppercase; }
+        .product.featured h2 { background-color: #ffeaa7; }
+        article > p { font-style: italic; color: #555; }
+        a[href="/"] { background-color: #74b9ff; color: white; padding: 2px 5px; }
+        .top-bar.dark h1 { color: #2d3436; }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <header class="top-bar dark">
+            <h1>ShopTLU</h1>
+            <nav>
+                <a href="/" class="active">Home</a>
+                <a href="/products">Products</a>
+                <a href="/about">About</a>
+            </nav>
+        </header>
+        <main>
+            <article class="product">
+                <h2>iPhone 16</h2>
+                <p class="price">25.990.000đ</p>
+                <p>Mô tả sản phẩm...</p>
+            </article>
+            <article class="product featured">
+                <h2>MacBook Pro</h2>
+                <p class="price">45.990.000đ</p>
+                <p>Mô tả sản phẩm...</p>
+            </article>
+        </main>
+    </div>
+</body>
+</html>

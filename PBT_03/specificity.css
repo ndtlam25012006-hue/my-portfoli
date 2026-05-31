@@ -1,0 +1,29 @@
+/* Rule 1: Bộ chọn toàn cục (0, 0, 0) */
+* { color: lightgrey; }
+
+/* Rule 2: Bộ chọn thẻ đơn lẻ (0, 0, 1) */
+p { color: pink; }
+
+/* Rule 3: Bộ chọn lồng nhau hai thẻ (0, 0, 2) */
+main p { color: silver; }
+
+/* Rule 4: Bộ chọn một lớp class (0, 1, 0) */
+.text { color: brown; }
+
+/* Rule 5: Bộ chọn kết hợp thẻ và lớp (0, 1, 1) */
+p.text { color: purple; }
+
+/* Rule 6: Bộ chọn tổ hợp hai lớp sát nhau (0, 2, 0) */
+.text.highlight { color: blue; }
+
+/* Rule 7: Bộ chọn đầy đủ thẻ và hai lớp (0, 2, 1) */
+p.text.highlight { color: orange; }
+
+/* Rule 8: Bộ chọn mã định danh ID duy nhất (1, 0, 0) */
+#demo { color: yellow; }
+
+/* Rule 9: Bộ chọn kết hợp thẻ và ID (1, 0, 1) */
+p#demo { color: cyan; }
+
+/* Rule 10: Bộ chọn có trọng số điểm cao nhất bài (1, 2, 1) */
+p#demo.text.highlight { color: red; }
