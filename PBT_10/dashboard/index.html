@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bảng Điều Khiển Tổng Hợp Song Song Multi-API</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 25px; background: #eceff1; }
+        .header-panel { display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; }
+        .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
+        .widget { background: white; border-radius: 8px; padding: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); min-height: 200px; }
+        .widget h3 { border-bottom: 2px solid #eee; padding-bottom: 8px; margin-bottom: 15px; color: #37474f; }
+        .error-msg { color: #d32f2f; font-weight: bold; }
+        .loading-text { color: #78909c; font-style: italic; }
+        button { padding: 10px 18px; background: #00bcd4; color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <div class="header-panel">
+        <div>
+            <h2>Hệ Thống Dashboard Tổng Hợp</h2>
+            <p id="perfTime" style="color:#555; font-size:14px; margin-top:5px;"></p>
+        </div>
+        <button id="refreshBtn">🔄 Làm tươi dữ liệu</button>
+    </div>
+
+    <div class="grid">
+        <div class="widget" id="widget-0"><h3>Widget Người Dùng</h3><div class="content"></div></div>
+        <div class="widget" id="widget-1"><h3>Widget Chó Cưng</h3><div class="content"></div></div>
+        <div class="widget" id="widget-2"><h3>Widget Quốc Gia</h3><div class="content"></div></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

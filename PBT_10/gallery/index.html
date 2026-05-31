@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Vô Hạn Album Ảnh - Infinite Scroll</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; background: #fff; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; }
+        @media (max-width: 900px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 500px) { .gallery-grid { grid-template-columns: repeat(1, 1fr); } }
+        .img-item { width: 100%; height: 200px; object-fit: cover; border-radius: 6px; cursor: pointer; transition: transform 0.2s; background: #eee; }
+        .img-item:hover { transform: scale(1.02); }
+        .indicator { text-align: center; padding: 20px; font-weight: bold; font-size: 16px; }
+        .lightbox { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); display: flex; justify-content: center; align-items: center; z-index: 1000; }
+        .lightbox img { max-width: 90%; max-height: 90%; border-radius: 4px; }
+        .hidden { display: none !important; }
+    </style>
+</head>
+<body>
+
+    <h2>Bộ Sưu Tập Ảnh Vô Hạn</h2>
+    <div id="gallery" class="gallery-grid"></div>
+    <div id="load-trigger" class="indicator">⏳ Đang tải thêm dữ liệu ảnh...</div>
+
+    <div id="lightbox" class="lightbox hidden" onclick="this.classList.add('hidden')">
+        <img id="lightboxImg" src="">
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
