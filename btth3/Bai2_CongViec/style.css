@@ -1,0 +1,220 @@
+/* File: style.css */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f3f4f6;
+    color: #1f2937;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #4f46e5;
+}
+
+/* Thống kê */
+.statistics {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.stat-card {
+    flex: 1;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.stat-card.total { background: #f3f4f6; color: #4b5563; border-top: 4px solid #9ca3af; }
+.stat-card.completed { background: #ecfdf5; color: #047857; border-top: 4px solid #10b981; }
+.stat-card.pending { background: #fff7ed; color: #c2410c; border-top: 4px solid #f97316; }
+
+.stat-card span {
+    display: block;
+    font-size: 1.5rem;
+    margin-top: 5px;
+}
+
+/* Thanh hành động */
+.action-bar {
+    margin-bottom: 25px;
+}
+
+/* Danh sách công việc động dạng Card */
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.task-item:hover {
+    transform: translateY(-2px);
+}
+
+/* Khi công việc đã hoàn thành: gạch ngang chữ, mờ đi */
+.task-item.is-completed .task-text h3,
+.task-item.is-completed .task-text p {
+    text-decoration: line-through;
+    color: #9ca3af;
+}
+
+.task-item.is-completed {
+    background: #f3f4f6;
+    border-left: 6px solid #10b981;
+}
+
+.task-text h3 {
+    margin-bottom: 5px;
+    color: #111827;
+}
+
+.task-text p {
+    font-size: 14px;
+    color: #4b5563;
+    margin-bottom: 5px;
+}
+
+.task-meta {
+    font-size: 12px;
+    display: flex;
+    gap: 10px;
+}
+
+.badge {
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-weight: 600;
+}
+
+.badge-high { background: #fee2e2; color: #dc2626; }
+.badge-medium { background: #fef3c7; color: #d97706; }
+.badge-low { background: #e0f2fe; color: #2563eb; }
+
+/* Khu vực nút bấm trong Card */
+.task-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.chk-complete {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+/* Các lớp nút chung */
+.btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn-success { background: #10b981; color: white; }
+.btn-primary { background: #4f46e5; color: white; }
+.btn-secondary { background: #6b7280; color: white; }
+.btn-warning { background: #f59e0b; color: white; padding: 6px 12px; }
+.btn-danger { background: #ef4444; color: white; padding: 6px 12px; }
+
+/* Thông báo Toast */
+.toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #111827;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    z-index: 1100;
+}
+
+/* Modal Popup */
+.modal {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    width: 450px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 10px;
+}
+
+.close-btn {
+    font-size: 24px;
+    cursor: pointer;
+    color: #9ca3af;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    outline: none;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.hidden { display: none !important; }

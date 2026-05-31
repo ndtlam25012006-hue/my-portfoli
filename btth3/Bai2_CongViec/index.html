@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K66 - Quản lý Công việc Cá nhân</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quản Lý Công Việc Cá Nhân</h1>
+        
+        <div id="toastMessage" class="toast hidden"></div>
+
+        <div class="statistics">
+            <div class="stat-card total">Tổng công việc: <span id="totalTasks">0</span></div>
+            <div class="stat-card completed">Đã hoàn thành: <span id="completedTasks">0</span></div>
+            <div class="stat-card pending">Chưa hoàn thành: <span id="pendingTasks">0</span></div>
+        </div>
+
+        <div class="action-bar">
+            <button id="btnOpenModal" class="btn btn-success">➕ Thêm công việc</button>
+        </div>
+
+        <div id="taskList" class="task-list">
+            </div>
+    </div>
+
+    <div id="taskModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Thêm Công Việc Mới</h3>
+                <span id="btnCloseModal" class="close-btn">&times;</span>
+            </div>
+            <form id="taskForm">
+                <input type="hidden" id="editTaskId">
+
+                <div class="form-group">
+                    <label for="taskTitle">Tiêu đề công việc:</label>
+                    <input type="text" id="taskTitle" required placeholder="Nhập tiêu đề...">
+                </div>
+                <div class="form-group">
+                    <label for="taskDesc">Mô tả ngắn:</label>
+                    <input type="text" id="taskDesc" required placeholder="Nhập mô tả ngắn...">
+                </div>
+                <div class="form-group">
+                    <label for="dueDate">Hạn hoàn thành:</label>
+                    <input type="date" id="dueDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="priority">Mức độ ưu tiên:</label>
+                    <select id="priority">
+                        <option value="Cao">Cao</option>
+                        <option value="Trung bình">Trung bình</option>
+                        <option value="Thấp">Thấp</option>
+                    </select>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" id="btnCancel" class="btn btn-secondary">Hủy</button>
+                    <button type="submit" class="btn btn-primary">Lưu công việc</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
